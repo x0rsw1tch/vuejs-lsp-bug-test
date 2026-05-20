@@ -5,7 +5,7 @@
     documentation
   </p>
   <div>
-    <ChildComponent :text="'Some text'" />
+    <ChildComponent :text="someText" />
   </div>
 </template>
 
@@ -15,5 +15,10 @@ import ChildComponent from './ChildComponent.vue';
 export default {
   name: "AppRoot",
   components: { ChildComponent },
+  data () {
+    return {
+      someText: 'This is the text'
+    }
+  }
 }
 </script>
